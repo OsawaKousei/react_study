@@ -1,5 +1,5 @@
 #Node.jsの最新版を記載
-FROM node:latest
+FROM node:22-slim
 #コンテナ内の作業ディレクトリを記載
 WORKDIR /usr/src/app
 
