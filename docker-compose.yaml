@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    node:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/usr/src/app
+        command: sh -c "cd test_project && yarn start"
+        ports:
+            - "3000:3000"
+# 【各項目の説明】
+# version：Composeファイルのバージョンを記載。Dockerの最新版を入れている場合は、ここを最新版にする。
+# バージョンによっては非対応なのでリファレンスをチェック（https://matsuand.github.io/docs.docker.jp.onthefly/compose/compose-file/compose-versioning/）
+# dockerfile：先ほど作成したdockerfile名を記載
+# volumes：ローカルのディレクトリが接続するDockerコンテナ内の作業ディレクトリを指定
+# command:コンテナ内で実行されるコマンドを記載
+# ports:外部に対して公開するポート番号
