@@ -5,12 +5,11 @@ const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     background-color: #282c34;
     color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    box-sizing: border-box; /* パディングを含めた幅を計算 */
 `;
 
 const CopyRight = styled.div`

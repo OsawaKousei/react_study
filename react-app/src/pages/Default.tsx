@@ -37,12 +37,19 @@ export default Default;
 
 //css
 const styles = {
+    // display: flex により、コンテナ内の要素を横並びにする
+    container: {
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+    },
     header: {
         height: 100,
         background: "#ddd",
     },
+    // flex: 1 により、メインコンテンツが残りの高さを埋める
     main: {
-        height: 200,
+        flex: 1,
     },
     footer: {
         height: 100,
