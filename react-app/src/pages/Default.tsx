@@ -7,6 +7,7 @@ import Home from "./Home";
 import Introduction from "./Introduction";
 import Recruit from "./Recruit";
 import Results from "./Results";
+import Footer from "./components/footer";
 import Header from "./components/header";
 
 class Default extends React.Component {
@@ -26,7 +27,7 @@ class Default extends React.Component {
                         <Route path="/results" element={<Results />} />
                     </Routes>
                 </main>
-                <footer style={styles.footer}>footer</footer>
+                <Footer />
             </div>
         );
     }

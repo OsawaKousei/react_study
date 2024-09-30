@@ -9,7 +9,8 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Default />} />
+                    <Route path="/login" element={<Default />} />
+                    <Route path="/*" element={<Default />} />
                 </Routes>
             </BrowserRouter>
         );

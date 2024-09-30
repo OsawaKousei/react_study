@@ -1,19 +1,20 @@
-// header.tsx
+// footer.tsx
 import styled from "styled-components";
-import DropdownMenu from "./dropdown_menu";
 
-const HeaderContainer = styled.header`
+const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #282c34;
     color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 `;
 
-const Logo = styled.div`
-    font-size: 1.5rem;
-    font-weight: bold;
+const CopyRight = styled.div`
+    font-size: 0.9rem;
 `;
 
 const Nav = styled.nav`
@@ -24,23 +25,22 @@ const Nav = styled.nav`
 const NavLink = styled.a`
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     &:hover {
         text-decoration: underline;
     }
 `;
 
-export default function Header() {
+export default function Footer() {
     return (
-        <HeaderContainer>
-            <Logo>MyLogo</Logo>
-            <DropdownMenu />
+        <FooterContainer>
+            <CopyRight>&copy; 2023 MyCompany</CopyRight>
             <Nav>
-                <NavLink href="#home">Home</NavLink>
-                <NavLink href="#about">About</NavLink>
+                <NavLink href="#privacy">Privacy Policy</NavLink>
+                <NavLink href="#terms">Terms of Service</NavLink>
                 <NavLink href="#contact">Contact</NavLink>
             </Nav>
-        </HeaderContainer>
+        </FooterContainer>
     );
 }
