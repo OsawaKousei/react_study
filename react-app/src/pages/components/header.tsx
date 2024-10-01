@@ -1,4 +1,3 @@
-// header.tsx
 import styled from "styled-components";
 import DropdownMenu from "./dropdown_menu";
 
@@ -31,16 +30,17 @@ const NavLink = styled.a`
     }
 `;
 
+const RightAlignedMenu = styled.div`
+    margin-left: auto; /* 右詰にするために追加 */
+`;
+
 export default function Header() {
     return (
         <HeaderContainer>
             <Logo>MyLogo</Logo>
-            <DropdownMenu />
-            <Nav>
-                <NavLink href="#home">Home</NavLink>
-                <NavLink href="#about">About</NavLink>
-                <NavLink href="#contact">Contact</NavLink>
-            </Nav>
+            <RightAlignedMenu>
+                <DropdownMenu />
+            </RightAlignedMenu>
         </HeaderContainer>
     );
 }
