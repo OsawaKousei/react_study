@@ -1,26 +1,46 @@
-import React from "react";
+import styled from "styled-components";
 
-const ScrollBoxContent: React.FC = () => {
+const NewsItem = styled.div`
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const News = () => {
     return (
-        <>
-            <p>
-                This is a scroll box. You can scroll the content inside this
-                box.
-            </p>
-            <p>
-                This is a scroll box. You can scroll the content inside this
-                box.
-            </p>
-            <p>
-                This is a scroll box. You can scroll the content inside this
-                box.
-            </p>
-            <p>
-                This is a scroll box. You can scroll the content inside this
-                box.
-            </p>
-        </>
+        <div>
+            <NewsItem>
+                <p>
+                    2024/04/09{" "}
+                    <a href="https://example.com">新歓情報を更新しました。</a>
+                </p>
+            </NewsItem>
+            <NewsItem>
+                <p>
+                    2024/04/09{" "}
+                    <a href="https://example.com">新歓情報を更新しました。</a>
+                </p>
+            </NewsItem>
+            <NewsItem>
+                <p>
+                    2024/04/09{" "}
+                    <a href="https://example.com">新歓情報を更新しました。</a>
+                </p>
+            </NewsItem>
+            <NewsItem>
+                <p>
+                    2024/04/09{" "}
+                    <a href="https://example.com">
+                        オンライン仮入会・体験のお知らせ
+                    </a>{" "}
+                    for more information.
+                </p>
+            </NewsItem>
+        </div>
     );
 };
 
-export default ScrollBoxContent;
+export default News;

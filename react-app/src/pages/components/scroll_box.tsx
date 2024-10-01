@@ -7,7 +7,7 @@ interface ScrollBoxProps {
     backgroundColor?: string;
     borderRadius?: string;
     boxShadow?: string;
-    title?: string; // タイトルプロパティを追加
+    title?: React.ReactNode;
     children: React.ReactNode;
 }
 

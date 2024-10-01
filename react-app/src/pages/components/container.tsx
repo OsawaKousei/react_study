@@ -9,6 +9,7 @@ interface ContainerProps {
     boxShadow?: string;
     maxWidth?: string;
     children: React.ReactNode;
+    style?: React.CSSProperties; // Add this line
 }
 
 const StyledContainer = styled.div<ContainerProps>`
@@ -19,6 +20,7 @@ const StyledContainer = styled.div<ContainerProps>`
     box-shadow: ${(props) => props.boxShadow || "0 4px 8px rgba(0, 0, 0, 0.1)"};
     max-width: ${(props) => props.maxWidth || "1200px"};
     width: 100%;
+    style: ${(props) => ({ ...props.style })}; // Add this line
 `;
 
 const Container: React.FC<ContainerProps> = ({
@@ -29,6 +31,7 @@ const Container: React.FC<ContainerProps> = ({
     boxShadow,
     maxWidth,
     children,
+    style,
 }) => {
     return (
         <StyledContainer
@@ -38,6 +41,7 @@ const Container: React.FC<ContainerProps> = ({
             borderRadius={borderRadius}
             boxShadow={boxShadow}
             maxWidth={maxWidth}
+            style={style} // Add this line
         >
             {children}
         </StyledContainer>

@@ -23,8 +23,13 @@ class Home extends Component {
                     backgroundColor="#f0f0f0"
                     borderRadius="0"
                     boxShadow="0 rgba(0, 0, 0, 0.2)"
+                    style={{
+                        backgroundImage: `url('/img01.png')`, // Specify the background image
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
                 >
-                    <div style={{ textAlign: "center" }}>
+                    <div style={{ textAlign: "center", color: "#fff" }}>
                         <h1>京大機械研究会</h1>
                         <p>Kyoto University Mechatronics Creators</p>
                     </div>
@@ -61,7 +66,7 @@ class Home extends Component {
                         backgroundColor="#fff"
                         borderRadius="8px"
                         boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-                        title="Scroll Box"
+                        title={<u>New Topics</u>}
                     >
                         <ScrollBoxContent />
                     </ScrollBox>
@@ -73,10 +78,23 @@ class Home extends Component {
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
-                        maxWidth="400px"
+                        maxWidth="500px"
+                        style={{
+                            backgroundImage: "url('/img01.png')",
+                            backgroundSize: "100% 100%", // Specify the size of the background image
+                            backgroundPosition: "center",
+                        }}
                     >
-                        <h2>Another Section1</h2>
-                        <p>This container has different styles.</p>
+                        <div
+                            style={{
+                                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                                padding: "10px",
+                                borderRadius: "8px",
+                                marginTop: "10px",
+                            }}
+                        >
+                            <h2>新歓情報</h2>
+                        </div>
                     </Container>
                     <Container
                         padding="20px"
@@ -84,10 +102,9 @@ class Home extends Component {
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
-                        maxWidth="400px"
+                        maxWidth="500px"
                     >
-                        <h2>Another Section2</h2>
-                        <p>This container has different styles.</p>
+                        <h2>サークル紹介</h2>
                     </Container>
                     <Container
                         padding="20px"
@@ -95,10 +112,9 @@ class Home extends Component {
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
-                        maxWidth="400px"
+                        maxWidth="500px"
                     >
-                        <h2>Another Section2</h2>
-                        <p>This container has different styles.</p>
+                        <h2>活動内容</h2>
                     </Container>
                     <Container
                         padding="20px"
@@ -106,10 +122,9 @@ class Home extends Component {
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
-                        maxWidth="400px"
+                        maxWidth="500px"
                     >
-                        <h2>Another Section2</h2>
-                        <p>This container has different styles.</p>
+                        <h2>活動成績</h2>
                     </Container>
                 </FlexContainer>
                 <Container

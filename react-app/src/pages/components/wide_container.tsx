@@ -8,6 +8,7 @@ interface WideContainerProps {
     borderRadius?: string;
     boxShadow?: string;
     maxWidth?: string;
+    style?: React.CSSProperties;
     children: React.ReactNode;
 }
 
@@ -20,6 +21,7 @@ const StyledWideContainer = styled.div<WideContainerProps>`
     width: 100%; /* 横幅を画面いっぱいに広げる */
     max-width: ${(props) => props.maxWidth || "none"}; /* max-width を調整 */
     box-sizing: border-box; /* Ensure padding is included in the element's total width */
+    ${(props) => ({ ...props.style })}; /* Add this line */
 `;
 
 const WideContainer: React.FC<WideContainerProps> = ({
@@ -30,6 +32,7 @@ const WideContainer: React.FC<WideContainerProps> = ({
     boxShadow,
     maxWidth,
     children,
+    style,
 }) => {
     return (
         <StyledWideContainer
@@ -39,6 +42,7 @@ const WideContainer: React.FC<WideContainerProps> = ({
             borderRadius={borderRadius}
             boxShadow={boxShadow}
             maxWidth={maxWidth}
+            style={style}
         >
             {children}
         </StyledWideContainer>

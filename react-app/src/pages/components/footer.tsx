@@ -53,8 +53,10 @@ export default function Footer() {
             >
                 <CopyRight>© 2023 Your Company</CopyRight>
                 <Nav>
-                    <NavLink href="/about">About</NavLink>
-                    <NavLink href="/contact">Contact</NavLink>
+                    <NavLink href="/about">twitter</NavLink>
+                    <NavLink href="/contact">youtube</NavLink>
+                    <NavLink href="/terms">github</NavLink>
+                    <NavLink href="/privacy">gitlab</NavLink>
                 </Nav>
             </WideContainer>
             <FlexContainer>
