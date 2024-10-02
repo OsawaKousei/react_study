@@ -73,7 +73,7 @@ class Home extends Component {
                 </Container>
                 <FlexContainer>
                     <Container
-                        padding="20px"
+                        padding="10px 10px 200px 10px"
                         margin="10px auto"
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
@@ -97,34 +97,76 @@ class Home extends Component {
                         </div>
                     </Container>
                     <Container
-                        padding="20px"
+                        padding="10px 10px 200px 10px"
                         margin="10px auto"
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
                         maxWidth="500px"
+                        style={{
+                            backgroundImage: "url('/img01.png')",
+                            backgroundSize: "100% 100%", // Specify the size of the background image
+                            backgroundPosition: "center",
+                        }}
                     >
-                        <h2>サークル紹介</h2>
+                        <div
+                            style={{
+                                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                                padding: "10px",
+                                borderRadius: "8px",
+                                marginTop: "10px",
+                            }}
+                        >
+                            <h2>サークル紹介</h2>
+                        </div>
                     </Container>
                     <Container
-                        padding="20px"
+                        padding="10px 10px 200px 10px"
                         margin="10px auto"
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
                         maxWidth="500px"
+                        style={{
+                            backgroundImage: "url('/img01.png')",
+                            backgroundSize: "100% 100%", // Specify the size of the background image
+                            backgroundPosition: "center",
+                        }}
                     >
-                        <h2>活動内容</h2>
+                        <div
+                            style={{
+                                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                                padding: "10px",
+                                borderRadius: "8px",
+                                marginTop: "10px",
+                            }}
+                        >
+                            <h2>活動内容</h2>
+                        </div>
                     </Container>
                     <Container
-                        padding="20px"
+                        padding="10px 10px 200px 10px"
                         margin="10px auto"
                         backgroundColor="#e0e0e0"
                         borderRadius="8px"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
                         maxWidth="500px"
+                        style={{
+                            backgroundImage: "url('/img01.png')",
+                            backgroundSize: "100% 100%", // Specify the size of the background image
+                            backgroundPosition: "center",
+                        }}
                     >
-                        <h2>活動成績</h2>
+                        <div
+                            style={{
+                                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                                padding: "10px",
+                                borderRadius: "8px",
+                                marginTop: "10px",
+                            }}
+                        >
+                            <h2>活動成績</h2>
+                        </div>
                     </Container>
                 </FlexContainer>
                 <Container
