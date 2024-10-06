@@ -36,8 +36,8 @@ const News = () => {
                     <a href="https://example.com">
                         オンライン仮入会・体験のお知らせ
                     </a>{" "}
-                    for more information.
                 </p>
+                <p>for more information.</p>
             </NewsItem>
         </div>
     );
