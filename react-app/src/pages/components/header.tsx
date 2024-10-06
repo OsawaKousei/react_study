@@ -3,31 +3,14 @@ import DropdownMenu from "./dropdown_menu";
 
 const HeaderContainer = styled.header`
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #282c34;
-    color: white;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
-const Logo = styled.div`
-    font-size: 1.5rem;
-    font-weight: bold;
-`;
-
-const Nav = styled.nav`
-    display: flex;
-    gap: 1rem;
-`;
-
-const NavLink = styled.a`
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-
-    &:hover {
-        text-decoration: underline;
-    }
+const Logo = styled.img`
+    height: 40px;
 `;
 
 const RightAlignedMenu = styled.div`
@@ -37,7 +20,7 @@ const RightAlignedMenu = styled.div`
 export default function Header() {
     return (
         <HeaderContainer>
-            <Logo>MyLogo</Logo>
+            <Logo src="/kikaiken_logo.png" alt="Kikaiken Logo" />
             <RightAlignedMenu>
                 <DropdownMenu />
             </RightAlignedMenu>
