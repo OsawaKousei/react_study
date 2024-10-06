@@ -1,61 +1,92 @@
-import React, { useState } from "react";
+import { motion } from "framer-motion";
+import React from "react";
+import { FaHome, FaTrophy } from "react-icons/fa";
+import { IoIosDocument } from "react-icons/io";
+import { RiMegaphoneFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const DropdownContainer = styled.div`
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  margin-right: 5rem;
 `;
 
 const DropdownButton = styled.button`
-    background-color: #4caf50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-    &:hover {
-        background-color: #3e8e41;
-    }
+  &:hover {
+    background-color: #0056b3;
+  }
 `;
 
-const DropdownContent = styled.div<{ show: boolean }>`
-    display: ${({ show }) => (show ? "block" : "none")};
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+const DropdownContent = styled(motion.div)`
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
 
-    a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
+  ${DropdownContainer}:hover & {
+    display: block;
+  }
+`;
 
-        &:hover {
-            background-color: #f1f1f1;
-        }
-    }
+const DropdownItem = styled(Link)`
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
 `;
 
 const DropdownMenu: React.FC = () => {
-    const [show, setShow] = useState(false);
-
-    const toggleDropdown = () => {
-        setShow(!show);
-    };
-
-    return (
-        <DropdownContainer>
-            <DropdownButton onClick={toggleDropdown}>Menu</DropdownButton>
-            <DropdownContent show={show}>
-                <Link to="/">Home</Link>
-                <Link to="/introduction">Introduction</Link>
-            </DropdownContent>
-        </DropdownContainer>
-    );
+  return (
+    <DropdownContainer>
+      <DropdownButton>Menu</DropdownButton>
+      <DropdownContent
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <DropdownItem to="/">
+          <FaHome />
+          ホーム
+        </DropdownItem>
+        <DropdownItem to="/">
+          <RiMegaphoneFill />
+          新歓情報
+        </DropdownItem>
+        <DropdownItem to="/introduction">
+          <IoIosDocument />
+          サークル紹介
+        </DropdownItem>
+        <DropdownItem to="/">
+          <FaTrophy />
+          活動成績
+        </DropdownItem>
+      </DropdownContent>
+    </DropdownContainer>
+  );
 };
 
 export default DropdownMenu;
